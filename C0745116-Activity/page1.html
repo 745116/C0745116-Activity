@@ -2,17 +2,20 @@
 <html>
 <head>
     <title>Event</title>
-    <script type="text/javascript">
-        function trigger() {
-            document.getElementById("hover").addEventListener("mouseover", popup);
-            function popup() {
-                alert("Welcome to my webPage!!!");
-            }
+    <script language="javascript">
+        function MouseRollover(MyImage) {
+            MyImage.src = "welcome.jpg";
+
         }
-        
+        fuction MouseOut(MyImage)
+        {
+            MyImage.src = "welcome2.jpg";
+        }
     </script>
+        
+    
     <style>
-        p {
+        img {
             font-size: 49px;
             position: fixed;
             left: 550px;
@@ -21,10 +24,13 @@
 
     </style>
 </head>
-<body onload="trigger();">
-    <p id="hover">
-      
-        <img src="welcome.jpg" /></p>
+<body>
+    <div align="center">
+        <img src="welcome.jpg" border="0px" width="650px" height="550px"
+             onMouseOver="MouseRollover(this)"
+             onMouseOut="MouseOut(this)" />
+        
 
+    </div>
 </body>
 </html>
